@@ -26,7 +26,8 @@
 		<module>trading</module>
 		<module>portfolio</module>
 		<module>settlement-processor</module>
-	</modules>
+        <module>stock-api</module>
+    </modules>
     <scm>
 		<connection/>
 		<developerConnection/>
