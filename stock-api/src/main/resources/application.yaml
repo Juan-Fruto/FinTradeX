@@ -1,0 +1,11 @@
+server:
+  port: 8089
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${FIN_TRADE_X_RDB_URL}
+    username: ${FIN_TRADE_X_RDB_USERNAME}
+    password: ${FIN_TRADE_X_RDB_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
