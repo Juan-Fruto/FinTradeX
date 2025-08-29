@@ -1,0 +1,3 @@
+use stock-historical-values
+db.createCollection("stock-historical-values");
+db.createCollection("stocks");
