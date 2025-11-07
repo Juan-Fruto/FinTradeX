@@ -37,5 +37,5 @@ jobs:
         ECR_REPOSITORY: dev/find-trade-x-rep
         IMAGE_TAG: latest
       run: |
-        docker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" -f user/Dockerfile user/
+        docker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" -f user/Dockerfile .
         docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
