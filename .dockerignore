@@ -1,0 +1,27 @@
+# Global ignores
+.git/
+.gitignore
+.idea/
+.vscode/
+**/.DS_Store
+**/node_modules/
+
+# Maven/Java build outputs
+**/target/
+**/out/
+
+# Docker and compose
+Dockerfile*
+**/Dockerfile*
+!user/Dockerfile
+**/docker-compose*.yml
+
+# Env files (never send secrets to the build context)
+*.env
+**/.env
+
+# Logs and tmp
+**/*.log
+**/tmp/
+**/.tmp/
+
