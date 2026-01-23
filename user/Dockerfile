@@ -25,7 +25,7 @@ FROM amazoncorretto:8u432-alpine3.17-jre
 WORKDIR /app
 
 # Use a non-root user
-RUN useradd -r -u 10001 spring
+RUN adduser -D -u 10001 spring
 USER 10001
 
 # Copy the fat jar built by Spring Boot
