@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # ---- Build stage ----
-FROM maven:3.9.9-eclipse-temurin-17 AS build
+FROM maven:3.9.12-amazoncorretto-17-alpine AS build
 WORKDIR /workspace
 
 # Copy only POMs first for better layer caching
@@ -21,7 +21,7 @@ COPY user/src user/src
 RUN mvn -q -B -DskipTests -pl user -am package
 
 # ---- Runtime stage ----
-FROM eclipse-temurin:17-jre
+FROM amazoncorretto:8u432-alpine3.17-jre
 WORKDIR /app
 
 # Use a non-root user
