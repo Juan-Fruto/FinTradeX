@@ -1,9 +1,9 @@
 package com.trading.project.service;
 
 import com.trading.project.entity.User;
+import com.trading.project.exception.UserNotFoundException;
 import com.trading.project.repository.UserRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,7 +20,8 @@ public class UserService {
     }
 
     public User getUserById(String id) {
-        return userRepository.findById(id).orElse(null);
+        return userRepository.findById(id)
+                .orElseThrow(UserNotFoundException::new);
     }
 
     public List<User> getAllUsers() {

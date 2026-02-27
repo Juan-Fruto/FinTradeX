@@ -12,7 +12,7 @@ import java.util.List;
 import static org.assertj.core.api.BDDAssertions.then;
 
 @DataJpaTest
-public class UserRepositoryTestIT {
+class UserRepositoryTestIT {
 
     @Autowired
     private UserRepository userRepository;
